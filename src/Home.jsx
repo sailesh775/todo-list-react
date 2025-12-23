@@ -25,7 +25,7 @@ export default function Home() {
   };
   // Delelte button
   const DeletedBtn = (d) => {
-    setStore(Store.filter((e) => e != d));
+    setStore(Store.filter((_, e) => e !== d));
   };
 
   // for Edit btn
@@ -97,7 +97,7 @@ export default function Home() {
                     <span>
                       <button
                         className="Delete-btn"
-                        onClick={() => DeletedBtn(task)}
+                        onClick={() => DeletedBtn(index)}
                       >
                         Delete
                       </button>
